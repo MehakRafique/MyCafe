@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Café</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2>☕ My Café</h2>
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+
+            <button id="themeButton">Toggle Light/Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <h1>Welcome to My Café</h1>
+
+            <div id="status"></div>
+
+            <p>
+                Welcome to My Café! Enjoy fresh coffee,
+                delicious pastries and a peaceful environment.
+            </p>
+
+            <img
+                class="cafe-image"
+                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80"
+                alt="Coffee shop"
+            >
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+
+            <article>
+                <h3>Our Café Story</h3>
+
+                <p>
+                    My Café is a friendly place where people
+                    can enjoy fresh coffee and tasty food.
+                    We welcome students, families and friends.
+                </p>
+
+                <p id="extraText" class="hidden">
+                    Our goal is to provide good quality coffee,
+                    delicious pastries and a comfortable
+                    environment for everyone. We prepare our
+                    products with care and serve our customers
+                    with a smile.
+                </p>
+
+                <button id="readMoreButton">Read More</button>
+            </article>
+        </section>
+
+        <section id="menu">
+            <h2>Our Menu</h2>
+
+            <h3>Filter Menu</h3>
+
+            <button class="filterButton" data-category="all">All</button>
+            <button class="filterButton" data-category="drinks">Drinks</button>
+            <button class="filterButton" data-category="pastries">Pastries</button>
+
+            <h3>Place Your Order</h3>
+
+            <ul>
+                <li data-category="drinks">
+                    <label>
+                        <input type="checkbox" class="foodItem" value="3">
+                        Espresso - $3
+                    </label>
+                </li>
+
+                <li data-category="drinks">
+                    <label>
+                        <input type="checkbox" class="foodItem" value="5">
+                        Cappuccino - $5
+                    </label>
+                </li>
+
+                <li data-category="pastries">
+                    <label>
+                        <input type="checkbox" class="foodItem" value="4">
+                        Croissant - $4
+                    </label>
+                </li>
+
+                <li data-category="pastries">
+                    <label>
+                        <input type="checkbox" class="foodItem" value="6">
+                        Chocolate Cake - $6
+                    </label>
+                </li>
+            </ul>
+
+            <p id="total">Total: $0</p>
+
+            <h3>Menu Details</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr data-category="drinks">
+                        <td>Espresso</td>
+                        <td>Drinks</td>
+                        <td>$3</td>
+                    </tr>
+
+                    <tr data-category="drinks">
+                        <td>Cappuccino</td>
+                        <td>Drinks</td>
+                        <td>$5</td>
+                    </tr>
+
+                    <tr data-category="pastries">
+                        <td>Croissant</td>
+                        <td>Pastries</td>
+                        <td>$4</td>
+                    </tr>
+
+                    <tr data-category="pastries">
+                        <td>Chocolate Cake</td>
+                        <td>Pastries</td>
+                        <td>$6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Special Offers</h2>
+
+            <ol type="A">
+                <li>Student Discount</li>
+                <li>Morning Coffee Deal</li>
+                <li>Weekend Special</li>
+            </ol>
+        </section>
+
+        <section id="contact">
+            <h2>Contact & Feedback</h2>
+
+            <form id="feedbackForm">
+
+                <label for="username">Name:</label>
+                <br>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <br><br>
+
+                <label for="email">Email:</label>
+                <br>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <br><br>
+
+                <label for="birth-year">Birth Year:</label>
+                <br>
+
+                <input
+                    type="text"
+                    id="birth-year"
+                    placeholder="Example: 2002"
+                >
+
+                <br><br>
+
+                <p>Are you a:</p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="customer"
+                        value="student"
+                    >
+                    Student
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="customer"
+                        value="regular"
+                    >
+                    Regular Customer
+                </label>
+
+                <br><br>
+
+                <label>
+                    <input type="checkbox" id="newsletter">
+                    Subscribe to our newsletter
+                </label>
+
+                <br><br>
+
+                <label for="special-notes">Special Request:</label>
+                <br>
+
+                <textarea
+                    id="special-notes"
+                    maxlength="100"
+                    rows="5"
+                    placeholder="Write your special request..."
+                ></textarea>
+
+                <p id="charCount">100 characters remaining</p>
+
+                <button type="submit">Submit</button>
+
+            </form>
+
+            <p id="formMessage"></p>
+            <p id="discountMessage"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 My Café | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
